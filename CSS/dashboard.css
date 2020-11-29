@@ -1,0 +1,248 @@
+body {background-color: #dedede;}
+a{ text-decoration: none; color:black;}
+
+/*BANNER*/
+.banner {
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 35px;
+  margin-top:-10px;
+  margin-left:-9px;
+}
+
+.banner-button{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: solid #404040 1px;
+  height: 25px;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: Gyre Schola;
+  position: relative;
+  border-radius: 3px;
+  background-color: #242424;
+  color: white;
+  text-transform: uppercase;
+  font-family: Gyre Schola;
+}
+
+.banner-button:hover{
+  background-color: #404040;
+}
+
+.banner-button.selected{
+  background-color: #404040;
+}
+
+.banner-as-at{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  height: 25px;
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: Gyre Schola;
+  position: relative;
+  background-color: #000;
+  color: white;
+  font-family: Gyre Schola;
+  border: none;
+}
+
+.banner-as-at-div{
+  position:absolute;
+  right: 10px;
+  top: 0px;
+}
+
+/*TILES*/
+
+.tile{
+  border: solid gray 1px;
+  height: 100px;
+  width: 200px;
+  font-size: 40pt;
+  box-shadow: 2px 2px 2px #888888, 2px 2px 2px #888888, 2px 2px 2px #888888;
+  font-weight: bold;
+  font-family: Gyre Schola;
+  position: relative;
+  margin-right:20px;
+  margin-left:20px;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius: 3px;
+}
+
+.tile-comment{
+  font-size: 14pt;
+  position: absolute;
+  font-weight: normal;
+  text-align: left;
+  left:8px;
+  bottom: 2px;
+}
+
+.tile-measure{
+  padding-top:10px;
+}
+
+/*tile OVERDUE*/
+.tile.overdue{
+  background-color: #f21313;
+}
+
+.tile.overdue:hover{
+  background-color: #c44141;
+}
+
+/*tile DUE*/
+.tile.due{
+  background-color: #f08f11;
+}
+
+.tile.due:hover{
+  background-color: #db9437;
+}
+
+/*tile COMPLETED*/
+.tile.completed{
+  background-color: #000;
+  color: #fff;
+}
+
+.tile.completed:hover{
+  background-color: #2b2b2b;
+}
+
+/*tile OPEN*/
+.tile.open{
+  background-color: #598bff;
+}
+
+.tile.open:hover{
+  background-color: #4873d9;
+}
+
+/*CARDS*/
+
+.card-wrapper{
+    text-align: center;
+}
+.card {
+  display: grid;
+  grid-gap: 10px;
+  width: 95%;
+  font-family: Gyre Schola;
+  margin-top:10px;
+  box-shadow: 2px 2px 2px #888888, 2px 2px 2px #888888, 2px 2px 2px  #888888;
+}
+
+.box {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.card-h1{
+  font-size: 20pt;
+  margin-top: -2px;
+  padding-left: 5px;
+}
+
+.card-h2{
+  font-size: 12pt;
+  margin-top: -2px;
+  color: #212121;
+  margin-top:-10px;
+}
+
+.card-p{
+  font-size: 12pt;
+  margin-top: -2px;
+  color: #212121;
+  margin-top:-10px;
+}
+
+.card-h1-notmal {
+  font-weight: normal;
+}
+
+.card-table{
+
+}
+
+.card-table-td{
+  width: 25%;
+}
+
+.card-banner-completed{
+    width:100%;
+    background-color: black;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.card-banner-due{
+    width:100%;
+    background-color: #f08f11;
+    color: #000;
+    border-radius: 3px;
+}
+
+.card-banner-overdue{
+    width:100%;
+    background-color: #f21313;
+    color: #000;
+    border-radius: 3px;
+}
+
+.card-banner-open{
+    width:100%;
+    background-color: #598bff;
+    color: #000;
+    border-radius: 3px;
+}
+
+
+/*BRANDING*/
+.branding{
+  /*position:absolute;*/
+  right: 0px;
+  bottom: 0px;
+  opacity: .8;
+  font-size: 12 pt;
+  color:black;
+  width: 100%;
+  text-align: center;
+  background-color: #dedede;
+  border: solid 1px gray;
+}
+
+.branding:hover{
+  right: 0px;
+  bottom: 0px;
+  opacity: .8;
+  font-size: 12 pt;
+  color:black;
+  width: 100%;
+  text-align: center;
+}
+
+
+/*CHARTS*/
+
+.charts-table{
+  width:100%
+}
+.charts-td-50{
+  width:50%
+}
+
+.charts-canvas{
+  width:100%;
+}
