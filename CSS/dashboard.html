@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+  <!-- BANNER START -->
+  <div class="banner">
+    <button class="banner-button" type="button" name="button">
+      dashboard
+    </button>
+    <button class="banner-button" type="button" name="button">
+      Tasks
+    </button>
+    <button class="banner-button selected" type="button" name="button">
+      Contracts
+    </button>
+    <div class="banner-as-at-div">
+      <button class="banner-as-at" type="button" name="button">
+        (As @ 0730 12 Mar 2020)
+      </button>
+    </div>
+
+
+  </div>
+  <br><br>
+  <!-- BANNER END -->
+  <!-- TILES START -->
+  <div align="center">
+
+    <button type="button" name="button" class="tile overdue">
+      <div class="tile-measure">8</div>
+      <br>
+      <span class="tile-comment">
+        Overdue
+      </span>
+    </button>
+
+    <button type="button" name="button" class="tile due">
+      <div class="tile-measure">10</div>
+      <br>
+      <span class="tile-comment">
+        Due in 30 days
+      </span>
+    </button>
+
+    <button type="button" name="button" class="tile open">
+      <div class="tile-measure">45</div>
+      <br>
+      <span class="tile-comment">
+        Active
+      </span>
+    </button>
+
+
+    <button type="button" name="button" class="tile completed">
+      <div class="tile-measure">15</div>
+      <br>
+      <span class="tile-comment">
+        Completed this F/Y
+      </span>
+    </button>
+
+    <button type="button" name="button" class="tile completed">
+      <div class="tile-measure">$2.5 M</div>
+      <br>
+      <span class="tile-comment">
+        Value
+      </span>
+    </button>
+  </div>
+  <!-- TILES END -->
+
+  <!-- CHARTS START -->
+
+
+  <div>
+    <table class="charts-table">
+      <td class="charts-td-50" class="charts-canvas">
+        <canvas id="myChart1"></canvas>
+      </td>
+      <td class="charts-td-50">
+        <canvas id="myChart2" class="charts-canvas"></canvas>
+      </td>
+    </table>
+
+    <table class="charts-table">
+      <td class="charts-td-50">
+        <canvas id="myChart3" class="charts-canvas"></canvas>
+      </td>
+      <td class="charts-td-50">
+        <canvas id="myChart4" class="charts-canvas"></canvas>
+      </td>
+    </table>
+  </div>
+
+
+  <!-- CHARTS END -->
+
+  <!-- CARDS START -->
+  <div align="center">
+    <div class="card">
+      <div class="box">
+        <div class="card-banner-completed">
+          <h1 class="card-h1">Title:
+            <span class="card-h1-notmal">Task to do somthing</span>
+          </h1>
+        </div>
+        <table class="card-table">
+          <td class="card-table-td">
+            <h2 class="card-h2">Status:
+              <span class="card-h1-notmal">Completed</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Start:
+              <span class="card-h1-notmal">01/07/2020</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Due:
+              <span class="card-h1-notmal">01/12/2020</span>
+            </h2>
+          </td>
+        </table>
+        <h2 class="card-h2">Assigned to:
+          <span class="card-h1-notmal">Me, myself and I</span>
+        </h2>
+        <h2 class="card-h2">Comments:
+        </h2>
+        <p class="card-p">
+          This and that happend right after that also happend.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="box">
+        <div class="card-banner-due">
+          <h1 class="card-h1">Title:
+            <span class="card-h1-notmal">Task to do somthing</span>
+          </h1>
+        </div>
+        <table class="card-table">
+          <td class="card-table-td">
+            <h2 class="card-h2">Status:
+              <span class="card-h1-notmal">Due in 30 days</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Start:
+              <span class="card-h1-notmal">01/07/2020</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Due:
+              <span class="card-h1-notmal">01/12/2020</span>
+            </h2>
+          </td>
+        </table>
+        <h2 class="card-h2">Assigned to:
+          <span class="card-h1-notmal">Me, myself and I</span>
+        </h2>
+        <h2 class="card-h2">Comments:
+        </h2>
+        <p class="card-p">
+          This and that happend right after that also happend.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="box">
+        <div class="card-banner-overdue">
+          <h1 class="card-h1">Title:
+            <span class="card-h1-notmal">Task to do somthing</span>
+          </h1>
+        </div>
+        <table class="card-table">
+          <td class="card-table-td">
+            <h2 class="card-h2">Status:
+              <span class="card-h1-notmal">Overdue</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Start:
+              <span class="card-h1-notmal">01/07/2020</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Due:
+              <span class="card-h1-notmal">01/12/2020</span>
+            </h2>
+          </td>
+        </table>
+        <h2 class="card-h2">Assigned to:
+          <span class="card-h1-notmal">Me, myself and I</span>
+        </h2>
+        <h2 class="card-h2">Comments:
+        </h2>
+        <p class="card-p">
+          This and that happend right after that also happend.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="box">
+        <div class="card-banner-open">
+          <h1 class="card-h1">Title:
+            <span class="card-h1-notmal">Task to do somthing</span>
+          </h1>
+        </div>
+        <table class="card-table">
+          <td class="card-table-td">
+            <h2 class="card-h2">Status:
+              <span class="card-h1-notmal">Active</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Start:
+              <span class="card-h1-notmal">01/07/2020</span>
+            </h2>
+          </td>
+          <td class="card-table-td">
+            <h2 class="card-h2">Due:
+              <span class="card-h1-notmal">01/12/2020</span>
+            </h2>
+          </td>
+        </table>
+        <h2 class="card-h2">Assigned to:
+          <span class="card-h1-notmal">Me, myself and I</span>
+        </h2>
+        <h2 class="card-h2">Comments:
+        </h2>
+        <p class="card-p">
+          This and that happend right after that also happend.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- CARDS END -->
+
+
+
+  <br>
+  <!-- BRANDING START -->
+  <button type="button" name="button" class="branding">
+    <b>Product by: </b>Allform Software Solutions
+    - <b>Website: </b>
+    <a href="https://allform.tech" target="_blank">
+      https://allform.tech
+    </a>
+    - <b>Email:</b>
+    <a href="mailto:info@allform.tech" target="_blank">
+      info@allform.tech
+    </a>
+  </button>
+  <!-- BRANDING END -->
+
+  <script type="text/javascript" src="functions.js"></script>
+
+  <script type="text/javascript">
+    var ctx = document.getElementById('myChart1').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'horizontalBar',
+
+      // The data for our dataset
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: '#9c7272',
+          borderColor: 'rgb(156, 114, 114)',
+          borderWidth: '0px',
+          data: [18, 10, 5, 2, 20, 30, 45]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Monthly',
+          fontStyle: 'bold',
+          fontSize: 20,
+          fontColor: 'black',
+        },
+        legend: {
+          display: false,
+          labels: {
+            fontColor: 'black',
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontColor: 'black'
+            },
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: 'black'
+            },
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            // this callback is used to create the tooltip label
+            label: function(tooltipItem, data) {
+              // get the data label and data value to display
+              // convert the data value to local string so it uses a comma seperated number
+              var dataLabel = data.labels[tooltipItem.index];
+              var value = ': $' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + ' K';
+
+              // make this isn't a multi-line label (e.g. [["label 1 - line 1, "line 2, ], [etc...]])
+              if (Chart.helpers.isArray(dataLabel)) {
+                // show value on first line of multiline label
+                // need to clone because we are changing the value
+                dataLabel = dataLabel.slice();
+                dataLabel[0] += value;
+              } else {
+                dataLabel += value;
+              }
+
+              // return the text to display on the tooltip
+              return dataLabel;
+            }
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('myChart2').getContext('2d');
+    var myPie = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['QLD', 'NSW', 'ACT', 'VIC', 'SA', 'WA', 'NT', 'TAS'],
+        datasets: [{
+          backgroundColor: ["#9c7272", "#9c8d72", "#729c7d", "#729c8e", "#727a9c", "#80729c", "#94729c", "#9c7280"],
+          borderColor: '#000',
+          borderWidth: '0px',
+          data: [0, 10, 5, 2, 20, 30, 45, 0]
+        }],
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'By State',
+          fontStyle: 'bold',
+          fontSize: 20,
+          fontColor: 'black',
+        },
+        legend: {
+          display: true,
+          labels: {
+            fontColor: 'black',
+          }
+        },
+        tooltips: {
+          callbacks: {
+            // this callback is used to create the tooltip label
+            label: function(tooltipItem, data) {
+              // get the data label and data value to display
+              // convert the data value to local string so it uses a comma seperated number
+              var dataLabel = data.labels[tooltipItem.index];
+              var value = ': $' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + ' K';
+
+              // make this isn't a multi-line label (e.g. [["label 1 - line 1, "line 2, ], [etc...]])
+              if (Chart.helpers.isArray(dataLabel)) {
+                // show value on first line of multiline label
+                // need to clone because we are changing the value
+                dataLabel = dataLabel.slice();
+                dataLabel[0] += value;
+              } else {
+                dataLabel += value;
+              }
+
+              // return the text to display on the tooltip
+              return dataLabel;
+            }
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('myChart3').getContext('2d');
+    var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'My First dataset',
+          backgroundColor: '#9c7272',
+          borderColor: 'rgb(156, 114, 114)',
+          borderWidth: '0px',
+          data: [18, 10, 5, 2, 20, 30, 45]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Monthly',
+          fontStyle: 'bold',
+          fontSize: 20,
+          fontColor: 'black',
+        },
+        legend: {
+          display: false,
+          labels: {
+            fontColor: 'black',
+          }
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              fontColor: 'black'
+            },
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: 'black'
+            },
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            // this callback is used to create the tooltip label
+            label: function(tooltipItem, data) {
+              // get the data label and data value to display
+              // convert the data value to local string so it uses a comma seperated number
+              var dataLabel = data.labels[tooltipItem.index];
+              var value = ': $' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].toLocaleString() + ' K';
+
+              // make this isn't a multi-line label (e.g. [["label 1 - line 1, "line 2, ], [etc...]])
+              if (Chart.helpers.isArray(dataLabel)) {
+                // show value on first line of multiline label
+                // need to clone because we are changing the value
+                dataLabel = dataLabel.slice();
+                dataLabel[0] += value;
+              } else {
+                dataLabel += value;
+              }
+
+              // return the text to display on the tooltip
+              return dataLabel;
+            }
+          }
+        }
+      }
+    });
+
+
+    var ctx = document.getElementById('myChart4').getContext('2d');
+    const colors = {
+      green: {
+        fill: '#e0eadf',
+        stroke: '#5eb84d',
+      },
+      lightBlue: {
+        stroke: '#6fccdd',
+      },
+      darkBlue: {
+        fill: '#92bed2',
+        stroke: '#3282bf',
+      },
+      purple: {
+        fill: '#8fa8c8',
+        stroke: '#75539e',
+      },
+    };
+
+    const cTA = [26, 36, 42, 38, 40, 30, 12];
+    const cTB = [34, 44, 33, 24, 25, 28, 25];
+    const cTC = [16, 13, 25, 33, 40, 33, 45];
+    const cTD = [5, 9, 10, 9, 18, 19, 20];
+    const xData = ["Jan 20", "Feb 20", "Mar 20", "Apr 20", "May 20", "Jun20", "Jul 20"];
+
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: xData,
+        datasets: [{
+          label: "Contract Type A",
+          fill: true,
+          backgroundColor: colors.purple.fill,
+          pointBackgroundColor: colors.purple.stroke,
+          borderColor: colors.purple.stroke,
+          pointHighlightStroke: colors.purple.stroke,
+          borderCapStyle: 'butt',
+          data: cTA,
+
+        }, {
+          label: "Contract Type B",
+          fill: true,
+          backgroundColor: colors.darkBlue.fill,
+          pointBackgroundColor: colors.darkBlue.stroke,
+          borderColor: colors.darkBlue.stroke,
+          pointHighlightStroke: colors.darkBlue.stroke,
+          borderCapStyle: 'butt',
+          data: cTB,
+        }, {
+          label: "Contract Type C",
+          fill: true,
+          backgroundColor: colors.green.fill,
+          pointBackgroundColor: colors.lightBlue.stroke,
+          borderColor: colors.lightBlue.stroke,
+          pointHighlightStroke: colors.lightBlue.stroke,
+          borderCapStyle: 'butt',
+          data: cTC,
+        }, {
+          label: "Contract Type D",
+          fill: true,
+          backgroundColor: colors.green.fill,
+          pointBackgroundColor: colors.green.stroke,
+          borderColor: colors.green.stroke,
+          pointHighlightStroke: colors.green.stroke,
+          data: cTD,
+        }]
+      },
+      options: {
+        responsive: false,
+        // Can't just just `stacked: true` like the docs say
+        title: {
+          display: true,
+          text: 'Contract Type',
+          fontStyle: 'bold',
+          fontSize: 20,
+          fontColor: 'black',
+        },
+        scales: {
+
+          yAxes: [{
+            stacked: true,
+            ticks: {
+              //beginAtZero:true,
+              fontColor: 'black'
+            },
+          }],
+          xAxes: [{
+            ticks: {
+              fontColor: 'black'
+            },
+          }],
+          animation: {
+            duration: 750,
+          },
+        },
+        tooltips: {
+          mode: 'label',
+          callbacks: {
+            label: function(tooltipItems, data) {
+              let cat = data.datasets[tooltipItems.datasetIndex].label;
+              let prefix = " $";
+              let yLab = tooltipItems.yLabel.toString();
+              let sufix = " K"
+              return cat + prefix + yLab + sufix;
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
